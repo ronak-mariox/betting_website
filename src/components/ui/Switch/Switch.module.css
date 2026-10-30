@@ -1,0 +1,90 @@
+.track {
+  position: relative;
+  flex: none;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--switch-off, var(--color-track));
+  padding: 0;
+  transition: background-color var(--transition-base);
+}
+
+.on {
+  background-color: var(--switch-on, var(--color-primary));
+}
+
+.knob {
+  position: absolute;
+  top: 3px;
+  border-radius: var(--radius-pill);
+  background-color: #fff;
+  transition: left var(--transition-base);
+}
+
+/* Settings toggles */
+.lg {
+  width: 43.992px;
+  height: 23.999px;
+}
+
+.lg .knob {
+  left: 3px;
+  width: 17.999px;
+  height: 17.999px;
+}
+
+.lg.on .knob {
+  left: 23px;
+}
+
+/* Preference rows — node 139:113915 */
+.md {
+  width: 39.995px;
+  height: 21.996px;
+}
+
+.md .knob {
+  left: 3px;
+  width: 15.996px;
+  height: 15.996px;
+}
+
+.md.on .knob {
+  left: 20.99px;
+}
+
+/* Inline toggle — whitelist mode, and the matrix's master column. */
+.sm {
+  width: 35.999px;
+  height: 19.993px;
+}
+
+.sm .knob {
+  left: 3px;
+  width: 13.993px;
+  height: 13.993px;
+}
+
+.sm.on .knob {
+  left: 18.99px;
+}
+
+/* Matrix cell — the View and Edit columns. */
+.xs {
+  width: 27.996px;
+  height: 15.996px;
+}
+
+.xs .knob {
+  left: 3px;
+  width: 9.996px;
+  height: 9.996px;
+}
+
+.xs.on .knob {
+  left: 14.99px;
+}
+
+.track:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}

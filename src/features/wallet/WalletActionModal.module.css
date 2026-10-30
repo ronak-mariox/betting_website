@@ -1,0 +1,50 @@
+.tile {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 43.992px;
+  height: 43.992px;
+  border-radius: var(--radius-tile);
+  background-color: var(--action-bg);
+  color: var(--action-color);
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.amount:focus {
+  border-color: var(--action-color);
+}
+
+.footer {
+  display: flex;
+  gap: 10px;
+  padding-top: var(--space-7);
+}
+
+.confirm {
+  flex: 1;
+  justify-content: center;
+  border-color: transparent;
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.confirm:hover {
+  filter: brightness(1.08);
+}
+
+/* Yellow needs a dark label to stay readable. */
+.confirmDark {
+  color: #0d1d32;
+}
+
+.cancel {
+  flex: none;
+  min-width: 96px;
+  justify-content: center;
+}

@@ -1,0 +1,64 @@
+.tile {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.label {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.value {
+  color: var(--tile-color, var(--color-text));
+  font-weight: var(--font-weight-bold);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Detail drawers */
+.md {
+  border: var(--border-hairline);
+  border-radius: var(--radius-tile);
+  background-color: var(--color-surface);
+  padding: var(--space-5) var(--space-6);
+}
+
+.md .value {
+  padding-top: var(--space-2);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Inline tiles inside a record card */
+.sm {
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-muted);
+  padding: var(--space-3) 10px;
+}
+
+.sm .value {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
+}
+
+/* Wallet totals on the profile sheet — node 139:88659 draws a wider tile with
+   a 12px label and an 18px figure. */
+.lg {
+  border: var(--border-hairline);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  padding: var(--space-7);
+}
+
+.lg .label {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.lg .value {
+  padding-top: var(--space-2);
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+}

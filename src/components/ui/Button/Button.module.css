@@ -1,0 +1,127 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-regular);
+  transition: background var(--transition-base), border-color var(--transition-base),
+    color var(--transition-base), transform var(--transition-base), opacity var(--transition-base);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button:not(:disabled):active {
+  transform: translateY(1px);
+}
+
+/* Sizes -------------------------------------------------------------- */
+.xs {
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.sm {
+  padding: 10px var(--space-5);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.md {
+  padding: var(--space-4);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
+}
+
+/* Variants ----------------------------------------------------------- */
+.primary {
+  justify-content: center;
+  border-color: transparent;
+  background-image: var(--gradient-cta);
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+}
+
+.primary:not(:disabled):hover {
+  filter: brightness(1.06);
+}
+
+.subtle {
+  background-color: var(--color-surface-subtle);
+}
+
+.subtle:not(:disabled):hover {
+  background-color: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+.selected {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.ghost {
+  border-color: transparent;
+  padding: 0;
+}
+
+/* Card actions — Refresh, Live, Export. */
+.quiet {
+  border-color: transparent;
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.quiet:hover {
+  background-color: var(--color-surface-subtle);
+}
+
+/* Outlined action — toolbar buttons next to the primary one. */
+.outline {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.outline:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.link {
+  border-color: transparent;
+  padding: 0;
+  background: none;
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.block {
+  display: flex;
+  width: 100%;
+}
+
+.label {
+  text-align: center;
+}
+
+.trailing {
+  display: flex;
+  flex: 1 0 0;
+  justify-content: flex-end;
+  min-width: 1px;
+}

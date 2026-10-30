@@ -1,0 +1,77 @@
+.card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  border: var(--border-hairline);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  padding: var(--card-padding);
+}
+
+/* Accent wash behind the card, as in the Figma stat row. */
+.tinted {
+  background-image: linear-gradient(153.387deg, var(--color-surface) 0%, var(--accent-wash) 100%);
+}
+
+.body {
+  min-width: 0;
+}
+
+.label {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-xs);
+}
+
+.value {
+  padding-top: var(--space-2);
+  color: var(--color-text);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.5px;
+  line-height: var(--line-height-2xl);
+}
+
+.caption {
+  padding-top: var(--space-1);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.delta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding-top: var(--space-3);
+  white-space: nowrap;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-xs);
+}
+
+.up {
+  color: var(--color-success);
+}
+
+.down {
+  color: var(--color-danger);
+}
+
+.flat {
+  color: var(--color-text-muted);
+}
+
+.tile {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 43.998px;
+  height: 43.998px;
+  border-radius: var(--radius-tile);
+  background-color: var(--accent-tile);
+  color: var(--accent-color);
+}

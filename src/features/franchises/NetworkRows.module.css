@@ -1,0 +1,159 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-bottom: var(--space-1);
+}
+
+.sectionTitle {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+}
+
+/* One person in a network list */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-tile);
+  background-color: var(--color-surface);
+  padding: var(--space-5) var(--space-6);
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.avatar {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  background-color: color-mix(in srgb, var(--avatar-color) 15%, transparent);
+  color: var(--avatar-color);
+  font-size: 16px;
+  font-weight: var(--font-weight-extrabold);
+  line-height: 24px;
+}
+
+.name {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-sm);
+}
+
+.meta {
+  padding-top: 2px;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.stats {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--grid-gap);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statLabel {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-3xs);
+  line-height: var(--line-height-3xs);
+}
+
+.statValue {
+  color: var(--stat-color);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-sm);
+}
+
+.tail {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.open {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  color: var(--color-text-muted);
+  padding: 0;
+}
+
+.open:hover:not(:disabled) {
+  color: var(--color-primary);
+}
+
+.open:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+/* Label / figure row — wallet totals and performance */
+.summaryRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  padding: var(--space-4) var(--space-6);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+.summaryValue {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+}
+
+.summaryFigure {
+  color: var(--stat-color);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-lg);
+}
+
+.summaryDelta {
+  color: var(--color-success);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+@media (max-width: 560px) {
+  .stats {
+    gap: var(--space-4);
+  }
+}

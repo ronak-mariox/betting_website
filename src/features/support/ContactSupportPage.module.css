@@ -1,0 +1,231 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* 64px circle washed in the brand blue at 15%. */
+.introTile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 63.995px;
+  height: 63.995px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-primary-tint);
+  font-size: 30px;
+  line-height: 1;
+}
+
+.introTitle {
+  padding-top: var(--space-4);
+  color: var(--color-text);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-2xl);
+}
+
+.introSubtitle {
+  padding-top: var(--space-2);
+  /* One readable measure — the heading centres, the sentence shouldn't run
+     the full width of the panel. */
+  max-width: 62ch;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+/* Four channels across the panel — each in its own colour. */
+.channels {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.channel {
+  display: flex;
+  flex-direction: column;
+  border: var(--hairline) solid rgba(var(--channel-rgb), 0.25);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  padding: var(--space-7);
+}
+
+.channelHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.channelTile {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 47.998px;
+  height: 47.998px;
+  border: var(--hairline) solid rgba(var(--channel-rgb), 0.25);
+  border-radius: 14px;
+  background-color: rgba(var(--channel-rgb), 0.1);
+  font-size: var(--font-size-2xl);
+  line-height: 1;
+}
+
+.channelText {
+  min-width: 0;
+}
+
+.channelTitle {
+  color: rgb(var(--channel-rgb));
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-md);
+}
+
+.channelHandle {
+  color: var(--color-text);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.channelNote {
+  padding-top: var(--space-4);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.channelAction {
+  margin-top: var(--space-5);
+  border-color: rgba(var(--channel-rgb), 0.25);
+  border-radius: var(--radius-md);
+  background-color: rgba(var(--channel-rgb), 0.1);
+  color: rgb(var(--channel-rgb));
+}
+
+.channelAction:hover {
+  background-color: rgba(var(--channel-rgb), 0.18);
+  color: rgb(var(--channel-rgb));
+}
+
+.notice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  border: var(--hairline) solid rgba(var(--color-primary-rgb), 0.2);
+  border-radius: 14px;
+  background-color: rgba(var(--color-primary-rgb), 0.06);
+  padding: var(--space-6);
+}
+
+.noticeEmoji {
+  flex: none;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.noticeTitle {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-sm);
+}
+
+.noticeBody {
+  padding-top: var(--space-1);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: 19.2px;
+}
+
+.noticeBody strong {
+  color: var(--color-text);
+  font-weight: var(--font-weight-bold);
+}
+
+.hours {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.window {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  border: var(--hairline) solid var(--color-border-soft);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-muted);
+  padding: var(--space-4);
+}
+
+.windowText {
+  min-width: 0;
+}
+
+.windowDay {
+  color: var(--color-text);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-xs);
+}
+
+.windowHours {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+/* Green while the desk is staffed; amber when only chat is covered. */
+.windowDot {
+  flex: none;
+  width: 7.993px;
+  height: 7.993px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-success);
+}
+
+.windowDot.limited {
+  background-color: var(--color-warning);
+}
+
+@media (max-width: 1240px) {
+  .channels,
+  .hours {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .channels,
+  .hours {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* The channel's action is a real link (tel:, WhatsApp, Telegram, mailto:). */
+.channelLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--space-5);
+  border: var(--hairline) solid rgba(var(--channel-rgb), 0.25);
+  border-radius: var(--radius-md);
+  background-color: rgba(var(--channel-rgb), 0.1);
+  padding: 6px var(--space-5);
+  color: rgb(var(--channel-rgb));
+  font-size: var(--font-size-xs);
+  text-decoration: none;
+}
+
+.channelLink:hover {
+  background-color: rgba(var(--channel-rgb), 0.18);
+}

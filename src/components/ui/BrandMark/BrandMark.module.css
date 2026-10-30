@@ -1,0 +1,11 @@
+.mark {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  background-image: var(--gradient-brand);
+  color: var(--color-text);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1;
+}

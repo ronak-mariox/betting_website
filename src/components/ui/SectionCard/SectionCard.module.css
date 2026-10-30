@@ -1,0 +1,49 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: var(--border-hairline);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  padding: var(--card-padding);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.title {
+  color: var(--color-text);
+  font-weight: var(--font-weight-bold);
+}
+
+/* 15px card title — charts and compact panels. */
+.sm .title {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+}
+
+/* 18px section title — tables and feature panels. */
+.md .title {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.md .subtitle {
+  padding-top: 2px;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+.body {
+  flex: 1;
+  padding-top: var(--space-6);
+}

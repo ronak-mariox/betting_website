@@ -1,0 +1,188 @@
+.sidebar {
+  position: relative;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  width: var(--sidebar-width);
+  border-right: var(--border-hairline);
+  background-color: var(--color-bg-sidebar);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 68px;
+  border-bottom: var(--border-hairline);
+  padding: 20px 18px 20.755px;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandName {
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: -0.3px;
+  line-height: var(--line-height-md);
+}
+
+.brandVersion {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-3xs);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-3xs);
+}
+
+.collapse {
+  position: absolute;
+  top: 20px;
+  right: -12px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: var(--border-hairline);
+  border-radius: var(--radius-tile);
+  background-color: var(--color-surface);
+  color: var(--color-text-muted);
+  padding: 0;
+}
+
+.identity {
+  border-bottom: var(--border-hairline);
+  padding: 12px 18px 12.755px;
+}
+
+/* Each panel signs its chip in the role's own colour — node 139:110879 draws
+   the Super Agent in yellow where the Franchise is green. */
+.identityChip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  border: var(--hairline) solid rgba(var(--role-rgb), 0.19);
+  border-radius: var(--radius-md);
+  background-color: rgba(var(--role-rgb), 0.15);
+  padding: 8.755px 12.755px;
+}
+
+.identityChip.brand {
+  --role-rgb: var(--color-primary-rgb);
+}
+
+.identityChip.info {
+  --role-rgb: 41, 182, 246;
+}
+
+.identityChip.success {
+  --role-rgb: 34, 197, 94;
+}
+
+.identityChip.warning {
+  --role-rgb: 250, 204, 21;
+}
+
+.identityRole {
+  color: rgb(var(--role-rgb));
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-xs);
+}
+
+.identityUser {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-3xs);
+  line-height: var(--line-height-3xs);
+}
+
+.search {
+  border-bottom: var(--border-hairline);
+  padding: 10px 14px 10.755px;
+}
+
+.nav {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: var(--space-3) 0;
+}
+
+.navItem {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 10px;
+  border-left: 1.51px solid transparent;
+  padding: 10px 18px 10px 19.51px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+.navItem:hover {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-text);
+}
+
+.navItemActive,
+.navItemActive:hover {
+  border-left-color: var(--color-primary);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.logoutWrap {
+  border-top: var(--border-hairline);
+  padding: 12.755px 0 12px;
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  border: none;
+  padding: 10px 18px;
+  background: none;
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+.logout:hover {
+  background-color: rgba(239, 68, 68, 0.08);
+}
+
+@media (min-width: 1081px) {
+  .sidebarCollapsed {
+    display: none;
+  }
+}
+
+@media (max-width: 1080px) {
+  .sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 30;
+    transform: translateX(-100%);
+    transition: transform var(--transition-base);
+  }
+
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+}
+
+.navEmpty {
+  margin: 0;
+  padding: var(--space-3) var(--space-5);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}

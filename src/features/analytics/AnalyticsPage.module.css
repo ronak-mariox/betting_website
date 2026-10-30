@@ -1,0 +1,87 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.card {
+  border: var(--border-hairline);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  padding: var(--space-7);
+}
+
+.chart {
+  padding-top: var(--space-8);
+}
+
+.chartStatus {
+  padding-top: var(--space-8);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-5);
+  padding-top: var(--space-7);
+}
+
+/* Each highlight is bordered in its own tone at 13%. */
+.highlight {
+  border: var(--hairline) solid rgba(var(--highlight-rgb), 0.13);
+  border-radius: var(--radius-tile);
+  background-color: var(--color-surface-muted);
+  padding: var(--space-5) var(--space-6);
+  min-width: 0;
+}
+
+.highlightLabel {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-2xs);
+}
+
+.highlightName {
+  padding-top: var(--space-2);
+  overflow: hidden;
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-sm);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.highlightValue {
+  padding-top: var(--space-1);
+  color: rgb(var(--highlight-rgb));
+  font-size: 20px;
+  font-weight: var(--font-weight-extrabold);
+  line-height: 30px;
+}
+
+@media (max-width: 1240px) {
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .highlights {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .stats {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

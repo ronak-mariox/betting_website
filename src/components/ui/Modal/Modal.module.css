@@ -1,0 +1,70 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: var(--space-8);
+  overflow-y: auto;
+}
+
+.panel {
+  width: 100%;
+  max-width: 580px;
+  border: var(--border-hairline);
+  border-radius: 20px;
+  background-color: var(--color-surface);
+  padding: 28.755px;
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.title {
+  color: var(--color-text);
+  font-size: 17px;
+  font-weight: var(--font-weight-bold);
+  line-height: 25.5px;
+}
+
+.subtitle {
+  padding-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.close {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: var(--border-hairline);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-hover);
+  color: var(--color-text);
+  padding: 0;
+}
+
+.close:hover {
+  background-color: var(--color-track);
+}
+
+.body {
+  padding-top: var(--space-7);
+}

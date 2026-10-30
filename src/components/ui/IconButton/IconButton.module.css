@@ -1,0 +1,15 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--radius-2, 6px);
+  background-color: var(--tint-bg);
+  color: var(--tint-color);
+  padding: var(--space-1);
+  transition: background-color var(--transition-base);
+}
+
+.button:hover {
+  background-color: var(--tint-hover);
+}

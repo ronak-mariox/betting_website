@@ -1,0 +1,123 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.label {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-xs);
+}
+
+/* Form dialogs use a small uppercase label. */
+.caps .label {
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.5px;
+  line-height: var(--line-height-2xs);
+  text-transform: uppercase;
+}
+
+.control {
+  position: relative;
+  margin-top: var(--space-2);
+}
+
+.caps .control {
+  margin-top: var(--space-1);
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: var(--space-4);
+  display: flex;
+  color: var(--color-text-muted);
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.input {
+  width: 100%;
+  height: 40.711px;
+  padding: 10px var(--space-4);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-input);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  transition: border-color var(--transition-base), background-color var(--transition-base);
+}
+
+.caps .input {
+  height: 41.001px;
+  padding: 10.755px 12.755px;
+  border-radius: var(--radius-sm);
+}
+
+.withIcon {
+  padding-left: 36px;
+}
+
+/*
+ * The select popup is drawn by the browser on its own canvas, so it never
+ * inherits the control's translucent surface — options need an opaque colour
+ * of their own or they render white-on-white.
+ */
+.input option {
+  background-color: var(--color-bg-header);
+  color: var(--color-text);
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.7;
+}
+
+.caps .input::placeholder {
+  opacity: 1;
+}
+
+.input:hover {
+  border-color: var(--color-track);
+}
+
+.input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+/*
+ * Chrome/Edge force their own light autofill background (and, on some
+ * versions, black text) onto a filled field — on this dark theme that
+ * renders as invisible or near-invisible text. Forcing both back to the
+ * theme's colours keeps an autofilled value as legible as a typed one.
+ * The absurdly long transition is the standard trick to beat the browser's
+ * own delayed style injection rather than fighting it with !important.
+ */
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--color-text);
+  -webkit-box-shadow: 0 0 0 1000px var(--color-surface-input) inset;
+  box-shadow: 0 0 0 1000px var(--color-surface-input) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.textarea {
+  height: 79.705px;
+  padding: 10px var(--space-4);
+  resize: vertical;
+  line-height: var(--line-height-sm);
+}
+
+.error {
+  margin-top: var(--space-2);
+  color: var(--color-danger);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}

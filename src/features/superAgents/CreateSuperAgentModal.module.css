@@ -1,0 +1,35 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+/* Password spans the dialog. */
+.grid > :last-child {
+  grid-column: 1 / -1;
+}
+
+.footer {
+  display: flex;
+  gap: 10px;
+  padding-top: var(--space-8);
+}
+
+.submit {
+  flex: 1;
+}
+
+.cancel {
+  flex: none;
+  min-width: 96px;
+}
+
+.wide {
+  width: 100%;
+}
+
+@media (max-width: 520px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

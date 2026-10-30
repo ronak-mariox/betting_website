@@ -1,0 +1,88 @@
+.wrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.th {
+  border-bottom: var(--hairline) solid var(--color-border-soft);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.5px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.td {
+  border-bottom: var(--hairline) solid var(--color-border-soft);
+  color: var(--color-text);
+}
+
+.right {
+  text-align: right;
+}
+
+.row {
+  transition: background-color var(--transition-base);
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.row:hover {
+  background-color: var(--color-surface-subtle);
+}
+
+/* Default density — recent transactions, downline lists. */
+.md .th {
+  padding: 0 var(--space-4) var(--space-3);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.md .td {
+  height: 43px;
+  padding: 0 var(--space-4);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+/* Roomy density — the super agent directory. */
+.lg .th {
+  padding: 0 var(--space-4) var(--space-3);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.lg .td {
+  height: 46px;
+  padding: 0 var(--space-4);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+/* Compact density — recent bets. */
+.sm .th {
+  padding: 0 10px var(--space-2);
+  font-size: var(--font-size-3xs);
+  line-height: var(--line-height-3xs);
+}
+
+.sm .td {
+  height: 41px;
+  padding: 0 10px;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.empty {
+  padding: var(--space-8) var(--space-4);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}

@@ -1,0 +1,129 @@
+.page {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--space-8);
+  overflow: hidden;
+  background-color: var(--color-bg);
+}
+
+/* Ambient radial glows from the Figma background layers. */
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.glowTop {
+  top: -120px;
+  left: -120px;
+  width: 479.994px;
+  height: 479.994px;
+  background: radial-gradient(circle, rgba(var(--color-primary-rgb), 0.12) 0%, rgba(var(--color-primary-rgb), 0) 70%);
+}
+
+.glowBottom {
+  right: -80px;
+  bottom: -80px;
+  width: 359.998px;
+  height: 359.998px;
+  background: radial-gradient(circle, rgba(41, 182, 246, 0.08) 0%, rgba(41, 182, 246, 0) 70%);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  padding-top: var(--space-5);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: -0.5px;
+  line-height: var(--line-height-xl);
+  text-align: center;
+}
+
+.tagline {
+  padding-top: var(--space-1);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  text-align: center;
+}
+
+.card {
+  margin-top: var(--space-9);
+}
+
+.roles {
+  margin-top: var(--space-5);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-7);
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.submit {
+  margin-top: var(--space-1);
+}
+
+.alert {
+  border: 0.61px solid rgba(248, 113, 113, 0.4);
+  border-radius: var(--radius-md);
+  background-color: rgba(248, 113, 113, 0.08);
+  padding: 10px var(--space-4);
+  color: var(--color-danger);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.footer {
+  padding-top: var(--space-6);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+  text-align: center;
+}
+
+/* Forgot-password flow (ForgotPasswordPage) and the post-reset notice on sign-in. */
+.hint {
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.notice {
+  border: 0.61px solid rgba(34, 197, 94, 0.4);
+  border-radius: var(--radius-md);
+  background-color: rgba(34, 197, 94, 0.08);
+  padding: 10px var(--space-4);
+  color: var(--color-success);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.backRow {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-6);
+}

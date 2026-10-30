@@ -1,0 +1,259 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.actions {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.refresh {
+  border-color: transparent;
+  color: var(--color-text);
+}
+
+.refresh:hover {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-text);
+}
+
+.suspendAll {
+  border-color: rgba(239, 68, 68, 0.3);
+  background-color: rgba(239, 68, 68, 0.15);
+  color: var(--color-danger);
+}
+
+.suspendAll:hover {
+  background-color: rgba(239, 68, 68, 0.22);
+  color: var(--color-danger);
+}
+
+/* Exposure table ------------------------------------------------------ */
+.market {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.emoji {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
+}
+
+.marketName {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-sm);
+}
+
+.liveDot {
+  width: 8.407px;
+  height: 8.407px;
+  flex: none;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-live);
+  opacity: 0.8;
+}
+
+.exposure {
+  color: rgb(var(--tone-rgb));
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-md);
+}
+
+.limit {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.utilization {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 116px;
+}
+
+.meter {
+  flex: 1;
+  min-width: 0;
+  /* The monitor's track is a touch brighter than the shared default. */
+  --bar-track: var(--color-track);
+  border-radius: 4px;
+}
+
+.percent {
+  min-width: 32px;
+  flex: none;
+  color: rgb(var(--tone-rgb));
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-xs);
+}
+
+.bets {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+}
+
+.rowActions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.view {
+  border-color: transparent;
+  background-color: var(--color-surface-input);
+  color: var(--color-text-muted);
+}
+
+.view:hover {
+  background-color: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+.suspend {
+  border-color: rgba(239, 68, 68, 0.3);
+  background-color: rgba(239, 68, 68, 0.15);
+  color: var(--color-danger);
+}
+
+.suspend:hover {
+  background-color: rgba(239, 68, 68, 0.22);
+  color: var(--color-danger);
+}
+
+/* Summary panels ------------------------------------------------------ */
+.panels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+/* Each panel is bordered in its own tone at 13%. */
+.panel {
+  border: var(--hairline) solid rgba(var(--tone-rgb), 0.13);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  padding: var(--space-7);
+}
+
+.panelHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.panelTitle {
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-md);
+}
+
+.panelCount {
+  color: rgb(var(--tone-rgb));
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 33px;
+}
+
+.panelList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: var(--space-5);
+  list-style: none;
+}
+
+.panelItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-muted);
+  padding: var(--space-3) 10px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+/* The glyph is one shape; only its colour changes per panel. */
+.panelIcon {
+  flex: none;
+  color: rgb(var(--tone-rgb));
+}
+
+@media (max-width: 1240px) {
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .panels {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .stats {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Detection: scan bar above the panels, and per-item reason + Resolve. */
+.scanBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.scanText {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.panelText {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.panelDetail {
+  opacity: 0.75;
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.resolve {
+  flex: none;
+  border: var(--hairline) solid rgba(var(--tone-rgb), 0.4);
+  border-radius: var(--radius-sm);
+  background: none;
+  padding: 2px 8px;
+  color: rgb(var(--tone-rgb));
+  font-size: var(--font-size-2xs);
+  cursor: pointer;
+}
+
+.resolve:disabled {
+  opacity: 0.5;
+  cursor: default;
+}

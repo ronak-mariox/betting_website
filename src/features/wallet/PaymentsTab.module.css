@@ -1,0 +1,210 @@
+.tab {
+  display: flex;
+  flex-direction: column;
+  gap: var(--grid-gap);
+  padding-top: var(--space-6);
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.summaryCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: var(--border-hairline);
+  border-radius: var(--radius-tile);
+  background-color: var(--color-surface-subtle);
+  padding: var(--space-4) var(--space-6);
+}
+
+.summaryTile {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 35.999px;
+  height: 35.999px;
+  border-radius: var(--radius-md);
+  background-color: var(--tile-bg);
+  color: var(--tile-color);
+}
+
+.summaryLabel {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.summaryValue {
+  color: var(--tile-color);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-lg);
+}
+
+/* Pending disbursements */
+.panel {
+  border: var(--hairline) solid rgba(250, 204, 21, 0.25);
+  border-radius: var(--radius-tile);
+  background-color: rgba(250, 204, 21, 0.05);
+  padding: var(--space-5) var(--space-6);
+}
+
+.panelHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.panelTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-warning);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-sm);
+}
+
+.payAll {
+  flex: none;
+  border-color: rgba(250, 204, 21, 0.3);
+  background-color: rgba(250, 204, 21, 0.12);
+  color: var(--color-warning);
+}
+
+.payAll:hover {
+  background-color: rgba(250, 204, 21, 0.2);
+  color: var(--color-warning);
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--space-4);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  border-bottom: var(--hairline) solid var(--color-border-soft);
+  padding: 10px 0;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.avatar {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-pill);
+  background-color: color-mix(in srgb, var(--avatar-color) 15%, transparent);
+  color: var(--avatar-color);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+}
+
+.rowName {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+}
+
+.rowMeta {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.rowAmount {
+  margin-left: auto;
+  color: var(--color-success);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+
+.payNow {
+  flex: none;
+  color: var(--color-primary);
+}
+
+.payNow:hover {
+  color: var(--color-primary);
+}
+
+/* History */
+.historyHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--grid-gap);
+  flex-wrap: wrap;
+}
+
+.historyTitle {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+}
+
+.historyActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.payId {
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+}
+
+.recipient {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+}
+
+.recipientCode {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.amount {
+  color: var(--color-success);
+  font-weight: var(--font-weight-bold);
+}
+
+.muted {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+@media (max-width: 1240px) {
+  .summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .summary {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

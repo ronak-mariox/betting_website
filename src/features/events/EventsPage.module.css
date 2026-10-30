@@ -1,0 +1,187 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--grid-gap);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.card {
+  border: var(--border-hairline);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  padding: var(--space-7);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--grid-gap);
+  flex-wrap: wrap;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.emoji {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.titleText {
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-lg);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+/* Outlined filter pills — the events board uses bordered chips. */
+.filter {
+  border: var(--border-hairline);
+  border-radius: var(--radius-sm);
+  background: none;
+  padding: var(--space-2) var(--space-5);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-xs);
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+.filter:hover {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-text);
+}
+
+.filterActive,
+.filterActive:hover {
+  background-color: rgba(255, 46, 99, 0.15);
+  color: var(--color-live);
+}
+
+.table {
+  padding-top: var(--space-6);
+}
+
+.event {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.eventEmoji {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+}
+
+.eventName {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-sm);
+}
+
+.eventScore {
+  padding-top: 2px;
+  color: var(--color-success);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-2xs);
+}
+
+.eventCode {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-3xs);
+  line-height: var(--line-height-3xs);
+}
+
+.inPlay {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-live);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-xs);
+}
+
+.dot {
+  width: 8.186px;
+  height: 8.186px;
+  flex: none;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-live);
+  opacity: 0.91;
+}
+
+.muted {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.strong {
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+}
+
+.exposure {
+  color: var(--color-live);
+  font-weight: var(--font-weight-bold);
+}
+
+.rowActions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.activity {
+  border-color: transparent;
+  background-color: rgba(var(--color-primary-rgb), 0.1);
+  color: var(--color-primary);
+}
+
+.activity:hover {
+  background-color: rgba(var(--color-primary-rgb), 0.2);
+  color: var(--color-primary);
+}
+
+.suspend {
+  border-color: rgba(239, 68, 68, 0.3);
+  background-color: rgba(239, 68, 68, 0.15);
+  color: var(--color-danger);
+}
+
+.suspend:hover {
+  background-color: rgba(239, 68, 68, 0.22);
+  color: var(--color-danger);
+}
+
+@media (max-width: 1240px) {
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .stats {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

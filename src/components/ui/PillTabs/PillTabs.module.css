@@ -1,0 +1,83 @@
+.tabs {
+  display: flex;
+  gap: var(--space-1);
+  flex-wrap: wrap;
+}
+
+/* Segmented control — the settings tab strip sits inside a bordered tray. */
+.segmented {
+  display: inline-flex;
+  gap: var(--space-1);
+  border: var(--border-hairline);
+  border-radius: var(--radius-tile);
+  background-color: var(--color-surface);
+  padding: var(--space-2);
+}
+
+.segmented .tab {
+  padding: 7px var(--space-6);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+/* Active segment is solid, not the loose pill's 20% tint. */
+.segmented .active,
+.segmented .active:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+.tab:hover {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-text);
+}
+
+.active,
+.active:hover {
+  background-color: rgba(var(--color-primary-rgb), 0.2);
+  color: var(--color-primary);
+}
+
+/* Wallet console */
+.md {
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+/* Transactions ledger */
+.sm {
+  padding: 7px var(--space-5);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.dot {
+  width: 6.362px;
+  height: 6.362px;
+  flex: none;
+  border-radius: var(--radius-pill);
+  background-color: var(--dot-color);
+  opacity: 0.76;
+}
+
+.badge {
+  border-radius: 10px;
+  background-color: var(--badge-bg);
+  padding: 0 var(--space-2);
+  color: var(--badge-color);
+  font-size: var(--font-size-3xs);
+  line-height: 16.025px;
+}

@@ -1,0 +1,128 @@
+.chart {
+  display: block;
+  width: 100%;
+  /* Kept visible for the edge axis labels; the scale keeps the data itself inside the plot. */
+  overflow: visible;
+}
+
+.grid {
+  stroke: var(--color-border-soft);
+  stroke-width: 1;
+}
+
+/* The zero line, drawn stronger once the axis runs below it. */
+.zero {
+  stroke: var(--color-text-muted);
+  stroke-opacity: 0.5;
+  stroke-width: 1;
+}
+
+.axis {
+  fill: var(--color-text-muted);
+  font-family: var(--font-family);
+  font-size: 11px;
+}
+
+.axisY {
+  text-anchor: end;
+}
+
+.axisX {
+  text-anchor: middle;
+}
+
+.line {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: var(--grid-gap);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.legendSwatch {
+  width: 8px;
+  height: 2.997px;
+  border-radius: 2px;
+}
+
+.donutRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+/* Commission distribution — ring centred with the legend beneath it. */
+.donutStack {
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-6);
+}
+
+.donutStack > svg {
+  align-self: center;
+}
+
+.donutStack .donutLegend {
+  flex: none;
+  gap: var(--space-3);
+}
+
+.donutStack .donutLegendItem {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.donutLegend {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.donutLegendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+.donutLegendLabel {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.donutLegendValue {
+  font-weight: var(--font-weight-semibold);
+}
+
+.donutSwatch {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-1, 4px);
+}
+
+@media (max-width: 720px) {
+  .donutRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-6);
+  }
+}

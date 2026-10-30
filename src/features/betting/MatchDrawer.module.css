@@ -1,0 +1,287 @@
+/* The match sheet paints its own header wash. */
+.header {
+  background-image: linear-gradient(
+    161.71deg,
+    rgba(255, 46, 99, 0.08) 0%,
+    rgba(var(--color-primary-rgb), 0.06) 100%
+  );
+}
+
+.identity {
+  min-width: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.emoji {
+  font-size: var(--font-size-2xl);
+  line-height: 33px;
+}
+
+.name {
+  color: var(--color-text);
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  line-height: 24px;
+}
+
+.liveDot {
+  width: 8px;
+  height: 8px;
+  flex: none;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-live);
+  opacity: 0.88;
+}
+
+.league {
+  padding-top: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.score {
+  padding-top: var(--space-1);
+  color: var(--color-success);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-xs);
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: var(--grid-gap);
+}
+
+.summaryTile {
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-input);
+  padding: 10px var(--space-4);
+}
+
+.tileLabel {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-3xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.5px;
+  line-height: var(--line-height-3xs);
+  text-transform: uppercase;
+}
+
+.tileValue {
+  padding-top: var(--space-1);
+  color: var(--tile-color);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-lg);
+}
+
+/* Overview */
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.detail {
+  border: var(--border-hairline);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-muted);
+  padding: 10px var(--space-5);
+}
+
+.detailValue {
+  padding-top: var(--space-1);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+  text-transform: capitalize;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-3);
+  padding-top: var(--space-1);
+}
+
+.actions > * {
+  padding: var(--space-3) var(--space-6);
+}
+
+.suspend {
+  border-color: rgba(239, 68, 68, 0.3);
+  background-color: rgba(239, 68, 68, 0.15);
+  color: var(--color-danger);
+}
+
+.suspend:hover {
+  background-color: rgba(239, 68, 68, 0.22);
+  color: var(--color-danger);
+}
+
+/* Markets tab */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-muted);
+  padding: var(--space-4) var(--space-6);
+}
+
+.rowTitle {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+}
+
+.rowMeta {
+  padding-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.rowActions {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.suspendChip {
+  border-color: rgba(239, 68, 68, 0.3);
+  background-color: rgba(239, 68, 68, 0.12);
+  color: var(--color-danger);
+  padding: 2px var(--space-3);
+  font-size: var(--font-size-2xs);
+}
+
+.suspendChip:hover {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: var(--color-danger);
+}
+
+/* Bets tab */
+.listCaption {
+  padding-bottom: var(--space-1);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.bet {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border-bottom: var(--hairline) solid var(--color-border-soft);
+  padding: var(--space-4) 0;
+}
+
+.bet:last-child {
+  border-bottom: none;
+}
+
+.avatar {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-primary-tint);
+  color: var(--color-primary);
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-bold);
+}
+
+.betMain {
+  flex: 1;
+  min-width: 0;
+}
+
+.betUser {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+}
+
+.betMeta {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.selection {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.betWhen {
+  padding-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+  opacity: 0.7;
+}
+
+.betRight {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-2);
+}
+
+.betAmount {
+  color: var(--color-success);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-sm);
+}
+
+@media (max-width: 640px) {
+  .summary,
+  .details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Live feed embeds (Diamond score card and video). */
+.stream,
+.scorecard {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: #000;
+}
+
+.stream {
+  aspect-ratio: 16 / 9;
+}
+
+.scorecard {
+  height: 190px;
+}

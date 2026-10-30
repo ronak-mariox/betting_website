@@ -1,0 +1,270 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+  align-items: flex-start;
+}
+
+/* Most tabs are two panels side by side. */
+.pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--grid-gap);
+  width: 100%;
+  align-items: start;
+}
+
+.card {
+  width: 100%;
+  border: var(--border-hairline);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  padding: var(--space-7);
+}
+
+.cardTitle {
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-lg);
+}
+
+.cardSubtitle {
+  padding-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding-top: var(--space-6);
+}
+
+.cardActions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  padding-top: var(--space-6);
+}
+
+.secondary {
+  border-color: transparent;
+  background-color: var(--color-surface-input);
+  color: var(--color-text-muted);
+}
+
+.secondary:hover {
+  background-color: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+/* Commission tab ------------------------------------------------------- */
+.rates {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding-top: var(--space-6);
+}
+
+.rates > div {
+  position: relative;
+}
+
+/* Room for the % sign parked inside the control. */
+.rateInput {
+  padding-right: var(--space-9);
+}
+
+.suffix {
+  position: absolute;
+  top: 34px;
+  right: var(--space-5);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  pointer-events: none;
+}
+
+.rateBar {
+  margin-top: var(--space-3);
+  --bar-track: var(--color-track);
+  border-radius: 4px;
+}
+
+/* Brand tab ------------------------------------------------------------ */
+.upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  border: 1.831px dashed var(--color-border);
+  border-radius: var(--radius-tile);
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: var(--space-8);
+  cursor: pointer;
+}
+
+.upload:hover {
+  background-color: var(--color-surface-subtle);
+}
+
+.logoMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47.998px;
+  height: 47.998px;
+  border-radius: var(--radius-tile);
+  background-image: var(--gradient-brand);
+  color: var(--color-text);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.uploadHint {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.colorLabel {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-xs);
+}
+
+.colorRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding-top: var(--space-1);
+}
+
+/* The swatch previews the value; the field beside it holds the hex. */
+.swatch {
+  flex: none;
+  width: 35.999px;
+  height: 35.999px;
+  border: 1.831px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+}
+
+.colorInput {
+  flex: 1;
+  min-width: 0;
+}
+
+/* The visible label sits above the row, so hide the field's own. */
+.colorInput label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.colorInput > div {
+  margin-top: 0;
+}
+
+/* API Keys tab --------------------------------------------------------- */
+.apiHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--grid-gap);
+  flex-wrap: wrap;
+}
+
+.apiList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-top: var(--space-6);
+}
+
+.apiRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  border: var(--border-hairline);
+  border-radius: var(--radius-tile);
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: var(--space-5) var(--space-6);
+}
+
+.apiMain {
+  flex: 1;
+  min-width: 0;
+}
+
+.apiMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.apiName {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+}
+
+/* Round-trip time chip beside the status pill. */
+.latency {
+  border-radius: 6px;
+  background-color: rgba(34, 197, 94, 0.1);
+  padding: 2px var(--space-2);
+  color: var(--color-success);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.apiKey {
+  padding-top: var(--space-2);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.apiActions {
+  display: flex;
+  flex: none;
+  gap: var(--space-2);
+}
+
+.quiet {
+  border-color: transparent;
+  background-color: var(--color-surface-input);
+  color: var(--color-text-muted);
+}
+
+.quiet:hover {
+  background-color: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+.delete {
+  border-color: rgba(239, 68, 68, 0.3);
+  background-color: rgba(239, 68, 68, 0.15);
+  color: var(--color-danger);
+}
+
+.delete:hover {
+  background-color: rgba(239, 68, 68, 0.22);
+  color: var(--color-danger);
+}
+
+@media (max-width: 1024px) {
+  .pair {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

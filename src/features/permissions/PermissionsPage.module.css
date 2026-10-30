@@ -1,0 +1,298 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--grid-gap);
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--grid-gap);
+  flex-wrap: wrap;
+}
+
+.title {
+  color: var(--color-text);
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+  line-height: 30px;
+}
+
+.subtitle {
+  padding-top: var(--space-1);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+/* Role selector -------------------------------------------------------- */
+.roles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.role {
+  display: block;
+  border: 1.221px solid var(--color-border);
+  border-radius: 14px;
+  background-color: var(--color-surface);
+  padding: var(--space-6) var(--space-6);
+  text-align: left;
+  transition: background-color var(--transition-base), border-color var(--transition-base);
+}
+
+.role:hover {
+  border-color: rgba(var(--role-rgb), 0.4);
+}
+
+/* The role being edited is washed and outlined in its own colour. */
+.roleActive,
+.roleActive:hover {
+  border-color: rgb(var(--role-rgb));
+  background-color: rgba(var(--role-rgb), 0.12);
+}
+
+.roleHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.roleEmoji {
+  flex: none;
+  font-size: var(--font-size-2xl);
+  line-height: 33px;
+}
+
+.roleText {
+  display: block;
+  min-width: 0;
+}
+
+.roleName {
+  display: block;
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-md);
+}
+
+.roleActive .roleName {
+  color: rgb(var(--role-rgb));
+}
+
+.roleDescription {
+  display: block;
+  padding-top: 1px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.roleMeter {
+  margin-top: var(--space-3);
+  --bar-track: var(--color-track);
+  border-radius: 4px;
+}
+
+.roleCount {
+  display: block;
+  padding-top: 5px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+/* Legend --------------------------------------------------------------- */
+.legend {
+  display: flex;
+  align-items: center;
+  gap: var(--space-7);
+  flex-wrap: wrap;
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-muted);
+  padding: 10px var(--space-6);
+}
+
+.legendTitle {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-xs);
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.legendDot {
+  width: 7.993px;
+  height: 7.993px;
+  border-radius: var(--radius-pill);
+}
+
+.legendTerm {
+  color: var(--color-text);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-xs);
+}
+
+.legendText {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+/* Permission group ----------------------------------------------------- */
+.group {
+  overflow: hidden;
+  border: var(--border-hairline);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+}
+
+/* The header picks up the selected role's colour. */
+.groupHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  border-bottom: var(--hairline) solid rgba(var(--role-rgb), 0.2);
+  background-color: rgba(var(--role-rgb), 0.06);
+  padding: var(--space-5) var(--space-7);
+}
+
+.groupTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.groupEmoji {
+  flex: none;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.groupName {
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-md);
+}
+
+.groupCount {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.allToggle {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.allLabel {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+/* Matrix --------------------------------------------------------------- */
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 90px 90px 90px;
+  align-items: center;
+  gap: var(--space-4);
+  border-bottom: var(--hairline) solid var(--color-border-soft);
+  padding: 13px var(--space-7);
+}
+
+.columns {
+  background-color: rgba(255, 255, 255, 0.02);
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.5px;
+  line-height: var(--line-height-2xs);
+  text-transform: uppercase;
+}
+
+.center {
+  text-align: center;
+}
+
+.permission:last-child {
+  border-bottom: none;
+}
+
+/* A permission with its master off dims the whole row. */
+.rowOff {
+  background-color: rgba(255, 255, 255, 0.01);
+  opacity: 0.55;
+}
+
+.permissionName {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+}
+
+.permissionDescription {
+  padding-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+}
+
+/* This matrix lifts its knobs; the settings toggles elsewhere sit flat. */
+.switch span {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 1024px) {
+  .roles {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .row {
+    grid-template-columns: minmax(0, 1fr) 64px 64px 64px;
+    gap: var(--space-3);
+    padding-left: var(--space-5);
+    padding-right: var(--space-5);
+  }
+}
+
+/* Load / save feedback. */
+.status {
+  margin-bottom: var(--space-4);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+.statusError {
+  color: var(--color-danger);
+}
+
+.statusOk {
+  color: var(--color-success);
+}

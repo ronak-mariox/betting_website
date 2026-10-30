@@ -1,0 +1,66 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  color: var(--color-text-muted);
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.input {
+  width: 100%;
+  border: var(--border-hairline);
+  background-color: var(--color-surface-input);
+  color: var(--color-text);
+  transition: border-color var(--transition-base);
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+/* Sidebar menu filter */
+.sm .icon {
+  left: var(--space-3);
+}
+
+.sm .input {
+  height: 31.491px;
+  padding: 6.755px 8.755px 6.755px 26.755px;
+  border-radius: 7px;
+  font-size: var(--font-size-xs);
+}
+
+/* Topbar global search */
+.md .icon {
+  left: 9.99px;
+}
+
+.md .input {
+  height: 37.013px;
+  padding: 8.755px 12.755px 8.755px 30.755px;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+}
+
+/* In-page toolbar search */
+.lg .icon {
+  left: 10.755px;
+}
+
+.lg .input {
+  height: 36px;
+  padding: 8px 12px 8px 32px;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+}

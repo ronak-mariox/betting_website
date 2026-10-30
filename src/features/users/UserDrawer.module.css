@@ -1,0 +1,423 @@
+.identity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.avatar {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 43.998px;
+  height: 43.998px;
+  border-radius: var(--radius-pill);
+  background-image: var(--gradient-brand);
+  color: var(--color-text);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-xl);
+}
+
+.name {
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-lg);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.code {
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.panel {
+  margin-top: var(--space-4);
+  border: var(--border-hairline);
+  border-radius: var(--radius-tile);
+  background-color: var(--color-surface);
+  padding: var(--space-5) var(--space-6);
+}
+
+.panelTitle {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+}
+
+.detailRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: var(--hairline) solid var(--color-border-soft);
+  padding: var(--space-3) 0 8.755px;
+  color: var(--color-text-muted);
+}
+
+.detailRow:last-child {
+  border-bottom: none;
+}
+
+.detailLabel {
+  width: 60px;
+  flex: none;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.detailValue {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-sm);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.actions > * {
+  flex: 1;
+  justify-content: center;
+}
+
+.danger {
+  border-color: rgba(239, 68, 68, 0.3);
+  background-color: rgba(239, 68, 68, 0.15);
+  color: var(--color-danger);
+}
+
+.danger:hover {
+  background-color: rgba(239, 68, 68, 0.22);
+  color: var(--color-danger);
+}
+
+/* Bets tab */
+.sectionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.betCard {
+  border: var(--border-hairline);
+  border-radius: var(--radius-tile);
+  background-color: var(--color-surface);
+  padding: 12.755px 14.755px;
+  margin-bottom: 10px;
+}
+
+.betTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.betEvent {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+}
+
+.betMarket {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.betAmountWon {
+  color: var(--color-success);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-xs);
+  text-align: right;
+}
+
+.betAmountLost {
+  color: var(--color-danger);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-xs);
+  text-align: right;
+}
+
+.betDate {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+  text-align: right;
+}
+
+.betBottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: var(--space-4);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.betId {
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+}
+
+.empty {
+  padding: var(--space-8) 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+/* Shared list scaffolding for the ledger and device tabs */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.listTitle {
+  padding-bottom: var(--space-1);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  border: var(--border-hairline);
+  border-radius: var(--radius-tile);
+  background-color: var(--color-surface);
+  padding: 14.755px 16.755px;
+}
+
+.rowTight {
+  padding: 12.755px 14.755px;
+}
+
+.rowTitle {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+}
+
+.rowRef {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.rowMeta {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.rowRight {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-1);
+}
+
+.amountUp {
+  color: var(--color-success);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-lg);
+}
+
+.amountDown {
+  color: var(--color-danger);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-lg);
+}
+
+/* Activity timeline */
+.timelineRow {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding-bottom: var(--space-6);
+}
+
+.timelineRail {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+}
+
+.timelineDot {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 27.999px;
+  height: 27.999px;
+  border: 1.51px solid rgba(var(--color-primary-rgb), 0.3);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-primary-tint);
+  color: var(--color-primary);
+}
+
+.timelineLine {
+  flex: 1;
+  width: 0.991px;
+  margin-top: var(--space-3);
+  background-color: var(--color-surface-hover);
+}
+
+.timelineTitle {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+}
+
+.timelineDetail {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.timelineWhen {
+  padding-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+  opacity: 0.7;
+}
+
+/* Devices */
+.deviceCurrent {
+  border-color: rgba(34, 197, 94, 0.25);
+}
+
+.deviceMain {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.deviceTile {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 37.993px;
+  height: 37.993px;
+  border-radius: var(--radius-md);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-text-muted);
+}
+
+.deviceTileCurrent {
+  background-color: rgba(34, 197, 94, 0.12);
+  color: var(--color-success);
+}
+
+.deviceMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.deviceMeta + .deviceMeta {
+  padding-top: 0;
+}
+
+.deviceSeen {
+  padding-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.deviceSeenActive {
+  color: var(--color-success);
+}
+
+.chipCurrent {
+  flex: none;
+  border-radius: var(--radius-2, 6px);
+  background-color: rgba(34, 197, 94, 0.12);
+  padding: 3px var(--space-3);
+  color: var(--color-success);
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-2xs);
+}
+
+.chipRevoke {
+  flex: none;
+  border: var(--hairline) solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--radius-2, 6px);
+  background-color: rgba(239, 68, 68, 0.1);
+  padding: 3px var(--space-3);
+  color: var(--color-danger);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.chipRevoke:hover {
+  background-color: rgba(239, 68, 68, 0.18);
+}
+
+/* "Agent: Deepak Kumar" beside the status badge in the Franchise view. */
+/* The owning agent reads in green, not the muted grey the other meta uses. */
+.owner {
+  color: var(--color-success);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+/* "Void" on an open bet (Void Bet permission). */
+.voidBet {
+  border: var(--hairline) solid rgba(239, 68, 68, 0.4);
+  border-radius: var(--radius-sm);
+  background: none;
+  padding: 1px 8px;
+  color: var(--color-danger);
+  font-size: var(--font-size-2xs);
+  cursor: pointer;
+}

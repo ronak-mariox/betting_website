@@ -1,0 +1,220 @@
+.topbar {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--grid-gap);
+  height: var(--topbar-height);
+  border-bottom: var(--border-hairline);
+  background-color: var(--color-bg-header);
+  padding: 0 var(--space-8);
+}
+
+.heading {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.title {
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.breadcrumbCurrent {
+  color: var(--color-text);
+}
+
+.globalSearch {
+  flex: none;
+  width: 199.993px;
+}
+
+.chip {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-2);
+  border: var(--hairline) solid transparent;
+  border-radius: var(--radius-sm);
+  padding: 6.755px 12.755px;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.chipLive {
+  border-color: rgba(255, 46, 99, 0.2);
+  background-color: rgba(255, 46, 99, 0.1);
+}
+
+.chipLiveLabel {
+  color: var(--color-live);
+  font-weight: var(--font-weight-semibold);
+}
+
+.chipMeta {
+  color: var(--color-text-muted);
+}
+
+.chipRole {
+  gap: var(--space-3);
+  border-color: rgba(var(--color-primary-rgb), 0.25);
+  background-color: var(--color-primary-tint);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.iconButton {
+  position: relative;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 35.999px;
+  height: 35.999px;
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-text);
+  padding: 0;
+}
+
+.iconButton:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.badgeDot {
+  position: absolute;
+  top: 5.99px;
+  right: 7.5px;
+  width: 8px;
+  height: 8px;
+  border: 1.51px solid var(--color-bg-header);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-live);
+}
+
+.avatar {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 35.999px;
+  height: 35.999px;
+  border: 1.51px solid rgba(var(--color-primary-rgb), 0.4);
+  border-radius: var(--radius-pill);
+  background-image: var(--gradient-brand);
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-md);
+  text-transform: uppercase;
+}
+
+.menuButton {
+  display: none;
+}
+
+.menuButton.menuButtonShown {
+  display: flex;
+}
+
+@media (max-width: 1240px) {
+  .globalSearch,
+  .chipLive {
+    display: none;
+  }
+}
+
+@media (max-width: 1080px) {
+  .menuButton {
+    display: flex;
+  }
+
+  .topbar {
+    padding: 0 var(--space-6);
+  }
+}
+
+/* --- Bell: the list of things waiting for this account ----------------- */
+.bell {
+  position: relative;
+  flex: none;
+}
+
+.alerts {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-header);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  padding: var(--space-3);
+}
+
+.alertsTitle {
+  margin: 0;
+  padding: var(--space-2) var(--space-3) var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.alertsEmpty {
+  margin: 0;
+  padding: var(--space-2) var(--space-3) var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.alert {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  padding: var(--space-3);
+  text-align: left;
+  cursor: pointer;
+}
+
+.alert:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.alertTitle {
+  color: var(--color-text);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.alertDetail {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+}
+
+button.avatar,
+button.chipRole {
+  cursor: pointer;
+}

@@ -1,0 +1,205 @@
+/* Shared skin for the dashboard panels' inner lists and tiles. */
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Live match row */
+.tile {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-subtle);
+  padding: 12.755px;
+}
+
+.tileTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+}
+
+.tileMeta {
+  padding-top: var(--space-1);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.tileValue {
+  color: var(--color-live);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.tileOdds {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Risk alert row */
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border: var(--hairline) solid var(--alert-border);
+  border-radius: var(--radius-md);
+  background-color: var(--alert-bg);
+  padding: 12.755px;
+}
+
+.alertMessage {
+  color: var(--color-text);
+  font-size: var(--font-size-xs);
+  line-height: 16.8px;
+}
+
+.alertAge {
+  padding-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+/* System health tiles */
+.healthGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.healthTile {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-muted);
+  padding: 10px var(--space-4);
+  color: var(--color-success);
+}
+
+.healthLabel {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.healthValue {
+  color: var(--color-success);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+}
+
+/* Activity feed */
+.feedRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border-bottom: var(--hairline) solid var(--color-border-soft);
+  padding: var(--space-2) 0 9.755px;
+}
+
+.feedRow:last-child {
+  border-bottom: none;
+}
+
+.feedEmoji {
+  flex: none;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+}
+
+.feedMessage {
+  color: var(--color-text);
+  font-size: var(--font-size-xs);
+  line-height: 16.8px;
+}
+
+.feedAge {
+  padding-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-3xs);
+  line-height: var(--line-height-3xs);
+}
+
+/* Table cell helpers */
+.mono {
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+}
+
+.strong {
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.muted {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.amountUp {
+  color: var(--color-success);
+  font-weight: var(--font-weight-bold);
+}
+
+.amountDown {
+  color: var(--color-danger);
+  font-weight: var(--font-weight-bold);
+}
+
+.selection {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.odds {
+  color: var(--color-warning);
+  font-family: var(--font-mono);
+  font-weight: var(--font-weight-bold);
+}
+
+.commissionTotal {
+  margin-top: var(--space-6);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-muted);
+  padding: var(--space-4);
+  text-align: center;
+}
+
+.commissionTotalLabel {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.commissionTotalValue {
+  padding-top: 2px;
+  color: var(--color-warning);
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+  line-height: 30px;
+}
+
+.meters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}

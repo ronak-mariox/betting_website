@@ -1,0 +1,37 @@
+.shell {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--color-bg);
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-8);
+}
+
+.scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: none;
+  background-color: rgba(6, 19, 33, 0.7);
+}
+
+@media (max-width: 1080px) {
+  .scrimOpen {
+    display: block;
+  }
+
+  .content {
+    padding: var(--space-6);
+  }
+}

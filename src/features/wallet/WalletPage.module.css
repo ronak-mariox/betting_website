@@ -1,0 +1,279 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--grid-gap);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+/* Partner payments panel */
+.partners {
+  border: var(--hairline) solid rgba(var(--color-primary-rgb), 0.25);
+  border-radius: var(--radius-lg);
+  background-image: linear-gradient(
+    170.35deg,
+    rgba(var(--color-primary-rgb), 0.1) 0%,
+    rgba(33, 168, 187, 0.08) 50%,
+    rgba(34, 197, 94, 0.06) 100%
+  );
+  padding: 18px var(--space-7);
+}
+
+.partnersHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.partnersTitle {
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-md);
+}
+
+.partnersSubtitle {
+  padding-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.manage {
+  flex: none;
+  border-color: rgba(var(--color-primary-rgb), 0.3);
+  background-color: var(--color-primary-tint);
+  color: var(--color-primary);
+  padding: var(--space-3) var(--space-6);
+}
+
+.manage:hover {
+  background-color: rgba(var(--color-primary-rgb), 0.22);
+  color: var(--color-primary);
+}
+
+.buckets {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: var(--space-5);
+}
+
+.bucket {
+  border: var(--hairline) solid var(--bucket-border);
+  border-radius: var(--radius-tile);
+  background-color: var(--color-surface-input);
+  padding: var(--space-4) var(--space-6);
+}
+
+.bucketHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.bucketEmoji {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+}
+
+.bucketLabel {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-sm);
+}
+
+.bucketActive {
+  margin-left: auto;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.bucketDue {
+  padding-top: var(--space-3);
+  color: var(--bucket-color);
+  font-size: 16px;
+  font-weight: var(--font-weight-extrabold);
+  line-height: 24px;
+}
+
+.bucketCaption {
+  padding-top: 3px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+/* Quick actions */
+.actions {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: var(--hairline) solid var(--action-border);
+  border-radius: var(--radius-tile);
+  background-color: var(--action-bg);
+  padding: var(--space-5);
+  color: var(--action-color);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+  transition: background-color var(--transition-base);
+}
+
+.action:hover {
+  background-color: var(--action-hover);
+}
+
+/* Tabbed card */
+.card {
+  border: var(--border-hairline);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  padding: var(--space-7);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--grid-gap);
+  flex-wrap: wrap;
+}
+
+.toolbarActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.table {
+  padding-top: var(--space-6);
+}
+
+.id {
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+}
+
+.user {
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.amount {
+  color: var(--color-success);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+}
+
+.amountOut {
+  color: var(--color-danger);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+}
+
+.muted {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.ref {
+  display: inline-block;
+  max-width: 300px;
+  overflow: hidden;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-2xs);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+.rowActions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.approve {
+  border-color: rgba(34, 197, 94, 0.3);
+  background-color: rgba(34, 197, 94, 0.15);
+  color: var(--color-success);
+}
+
+.approve:hover {
+  background-color: rgba(34, 197, 94, 0.22);
+  color: var(--color-success);
+}
+
+.reject {
+  border-color: rgba(239, 68, 68, 0.3);
+  background-color: rgba(239, 68, 68, 0.15);
+  color: var(--color-danger);
+}
+
+.reject:hover {
+  background-color: rgba(239, 68, 68, 0.22);
+  color: var(--color-danger);
+}
+
+@media (max-width: 1240px) {
+  .stats,
+  .actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .buckets {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .stats,
+  .actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* A staff account's own wallet, with the Fund Transfer action. */
+.myWallet {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-7);
+  border: var(--border-hairline);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  padding: var(--space-7) var(--space-8);
+}
+
+.myWalletLabel {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.myWalletValue {
+  color: var(--color-text);
+  font-size: 22px;
+  font-weight: var(--font-weight-bold);
+  line-height: 32px;
+}
+
+.myWalletNote {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+}

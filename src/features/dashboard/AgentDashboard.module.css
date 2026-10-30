@@ -1,0 +1,218 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+}
+
+/* Eight cards, four to a row. */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.overview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+/* Each slice of the book in its own colour. */
+.tile {
+  border: var(--hairline) solid var(--color-border-soft);
+  border-radius: var(--radius-tile);
+  background-color: var(--color-surface-muted);
+  padding: var(--space-6);
+}
+
+.tileLabel {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.tileValue {
+  padding-top: var(--space-2);
+  color: var(--tile-color);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-xl);
+}
+
+.tileShare {
+  color: var(--tile-color);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: var(--grid-gap);
+  align-items: start;
+}
+
+.feed,
+.txns {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feedItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  border-bottom: var(--hairline) solid var(--color-border-soft);
+  padding: var(--space-4) 0;
+}
+
+.feedItem:last-child {
+  border-bottom: none;
+}
+
+.feedDot {
+  flex: none;
+  width: 7.993px;
+  height: 7.993px;
+  margin-top: var(--space-2);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-primary-light);
+}
+
+.feedText {
+  min-width: 0;
+}
+
+.feedDescription {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+.feedTime {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.txn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  border-bottom: var(--hairline) solid var(--color-border-soft);
+  padding: var(--space-4) 0;
+}
+
+.txn:last-child {
+  border-bottom: none;
+}
+
+.txnText {
+  min-width: 0;
+}
+
+.txnUser {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+}
+
+.txnMeta {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.txnAmount {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-1);
+}
+
+.amount {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-md);
+}
+
+.amount.in {
+  color: var(--color-success);
+}
+
+.amount.out {
+  color: var(--color-danger);
+}
+
+@media (max-width: 1240px) {
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .stats,
+  .overview {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Per-agent breakdown on the super agent / franchise dashboard. */
+.agents {
+  overflow-x: auto;
+}
+
+.agentsTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-xs);
+}
+
+.agentsTable th {
+  border-bottom: var(--border-hairline);
+  padding: 0 var(--space-5) var(--space-4);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.06em;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.agentsTable td {
+  border-bottom: var(--border-hairline);
+  padding: var(--space-5);
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.agentsTable tr:last-child td {
+  border-bottom: 0;
+}
+
+.agentName {
+  display: block;
+  font-weight: var(--font-weight-medium);
+}
+
+.agentId {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+}

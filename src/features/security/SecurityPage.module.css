@@ -1,0 +1,414 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.card {
+  border: var(--border-hairline);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  padding: var(--space-7);
+}
+
+.body {
+  padding-top: var(--space-7);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Shared tab header ---------------------------------------------------- */
+.tabHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--grid-gap);
+  flex-wrap: wrap;
+  padding-bottom: var(--space-4);
+}
+
+.tabTitle {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+}
+
+.tabSubtitle {
+  padding-top: var(--space-1);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.danger {
+  border-color: rgba(239, 68, 68, 0.3);
+  background-color: rgba(239, 68, 68, 0.15);
+  color: var(--color-danger);
+}
+
+.danger:hover {
+  background-color: rgba(239, 68, 68, 0.22);
+  color: var(--color-danger);
+}
+
+.quiet {
+  border-color: transparent;
+  color: var(--color-text);
+}
+
+.quiet:hover {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-text);
+}
+
+/* Logs tab ------------------------------------------------------------- */
+.logUser {
+  color: var(--color-text);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-xs);
+}
+
+.logAction {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.ip {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+/* A failed attempt tints its whole row, as drawn. */
+.logFailed {
+  background-color: rgba(239, 68, 68, 0.03);
+}
+
+/* A failed attempt or a blocked entry turns its address red. */
+.ipFlagged {
+  color: var(--color-danger);
+}
+
+.ipLarge {
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.meta {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+/* Sessions tab --------------------------------------------------------- */
+.session {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  border: var(--border-hairline);
+  border-radius: var(--radius-tile);
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: var(--space-4) var(--space-5);
+}
+
+/* The viewer's own session is tinted green and cannot be revoked. */
+.sessionOwn {
+  border-color: rgba(34, 197, 94, 0.2);
+  background-color: rgba(34, 197, 94, 0.06);
+}
+
+.avatar {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 35.999px;
+  height: 35.999px;
+  border-radius: var(--radius-md);
+  background-color: rgba(var(--color-primary-rgb), 0.12);
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+
+.sessionMain {
+  flex: 1;
+  min-width: 0;
+}
+
+.sessionName {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+}
+
+.you {
+  border-radius: 6px;
+  background-color: rgba(34, 197, 94, 0.15);
+  padding: 1px var(--space-2);
+  color: var(--color-success);
+  font-size: var(--font-size-3xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-3xs);
+}
+
+.sessionMeta {
+  padding-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.sessionSide {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.duration {
+  color: var(--color-success);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-xs);
+}
+
+.revoke {
+  border: var(--hairline) solid rgba(239, 68, 68, 0.2);
+  border-radius: 6px;
+  background-color: rgba(239, 68, 68, 0.1);
+  padding: var(--space-1) 10px;
+  color: var(--color-danger);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.revoke:hover {
+  background-color: rgba(239, 68, 68, 0.18);
+}
+
+/* Audit tab ------------------------------------------------------------ */
+.audit {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-5);
+  border-bottom: var(--hairline) solid var(--color-border-soft);
+  padding: var(--space-4) 0;
+}
+
+.auditTile {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 31.993px;
+  height: 31.993px;
+  border-radius: var(--radius-pill);
+  background-color: rgba(var(--color-primary-rgb), 0.1);
+  color: var(--color-primary);
+}
+
+.auditMain {
+  flex: 1;
+  min-width: 0;
+}
+
+.auditActor {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-sm);
+}
+
+.auditDescription {
+  padding-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.auditTime {
+  padding-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.auditSide {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-2);
+}
+
+/* IP Whitelist tab ----------------------------------------------------- */
+.wlActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.wlToggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  border: var(--border-hairline);
+  border-radius: var(--radius-sm);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: var(--space-2) var(--space-4);
+}
+
+/* This toggle's off-track is a shade brighter than the shared default. */
+.wlSwitch {
+  --switch-off: var(--color-track);
+}
+
+.wlToggleLabel {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.wlLabel {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-sm);
+}
+
+.wlTable {
+  padding-top: var(--space-4);
+}
+
+.rowActions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.edit {
+  border-color: transparent;
+  background-color: var(--color-surface-input);
+  color: var(--color-text-muted);
+}
+
+.edit:hover {
+  background-color: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+.delete {
+  border-color: rgba(239, 68, 68, 0.3);
+  background-color: rgba(239, 68, 68, 0.15);
+  color: var(--color-danger);
+}
+
+.delete:hover {
+  background-color: rgba(239, 68, 68, 0.22);
+  color: var(--color-danger);
+}
+
+/* Settings tab --------------------------------------------------------- */
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.toggleList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-top: var(--space-4);
+}
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-muted);
+  padding: var(--space-4) var(--space-5);
+}
+
+.toggleTitle {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-sm);
+}
+
+.toggleDescription {
+  padding-top: 2px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-2xs);
+  line-height: var(--line-height-2xs);
+}
+
+.policy {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  padding-top: var(--space-4);
+}
+
+.policyActions {
+  padding-top: var(--space-6);
+}
+
+@media (max-width: 1240px) {
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .stats,
+  .policy {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Load / empty / result lines for the live tabs. */
+.error,
+.empty,
+.notice {
+  margin: var(--space-3) 0;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+}
+
+.error {
+  color: var(--color-danger);
+}
+
+.empty {
+  color: var(--color-text-muted);
+}
+
+.notice {
+  color: var(--color-success);
+}

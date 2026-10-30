@@ -1,0 +1,32 @@
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* The message body is taller than the shared textarea default. */
+.body {
+  height: 99.202px;
+}
+
+.footer {
+  display: flex;
+  gap: var(--space-3);
+  padding-top: var(--space-6);
+}
+
+.submit {
+  flex: 1;
+}
+
+.cancel {
+  flex: none;
+  border-color: transparent;
+  background-color: var(--color-surface-input);
+  color: var(--color-text-muted);
+}
+
+.cancel:hover {
+  background-color: var(--color-surface-hover);
+  color: var(--color-text);
+}
